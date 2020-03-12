@@ -1,96 +1,88 @@
 p, h1, h2, h3 {
-    margin-block-start:0; 
-    margin-block-end:0; 
-    margin-inline-start:0; 
-    margin-inline-end:0;
-	padding-block-start:0; 
-	padding-block-end:0; 
-	padding-inline-start:0; 
-	padding-inline-end:0;
-}
-
-@font-face {
-    font-family: Iceland;
-    src: url("../fonts/Iceland-Regular.ttf");
-    
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
   }
   
-  h1 {
+  @font-face {
     font-family: Iceland;
-    font-size: 16vw;
-    font-weight: normal;
-    
-    padding: 0 0.2em;
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: 0;
+      src: url("../fonts/Iceland-Regular.ttf");
   }
-
-body {
-	background-color: #000;
-	margin: 0;
-    padding: 0;
-
-    color: #606c76;
+   
+  body {
     font-family: Iceland, Monospace, sans-serif;
     font-size: 1.6em;
     font-weight: 300;
     line-height: 1.6;
     text-align: center;
-}
-
-.page-header {
+    color: #606c76;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page-header {
     text-align: center;
     color: #aaaaaa;
-}
-
-.panel {
+  }
+  
+  .panel {
     padding: 20px;
-}
-.quote__text {
+  }
+  
+  .quote__text {
+    font-size: 4vw;
+    text-align: center;
+    line-height: 1;
     color: #fff;
     margin: 0 auto;
     padding: 10px 15px 25px 15px;
-    font-size: 4vw;
-    text-align: center;
-    line-height: 1;  
-}
 
-.quote__text strong {
+  }
+  
+  .quote__text strong {
     font-weight: bold;
     color: #d09f9f;
-}
-
-.quote__description {
-	margin: 0;
+  }
+  
+  .quote__description {
     font-size: 0.7em;
     text-align: left;
     color: #ccc;
+    margin: 0;
+  }
+  
+  .description-item{
+    padding: 5px;
+  }
 
-}
-
-.description-item__ico {
-    display: inline-block;  
+  .description-item__ico {
+    display: inline-block;
     width: 15px;
     height: 15px;
     background-size: contain;
     background-repeat: no-repeat;
-    vertical-align: text-top;
-}
-
-.description-item__ico_tag {
+    vertical-align: middle;
+  }
+  
+  .description-item__ico_tag {
     background-image: url("../images/tag.svg");
-}
-
-.description-item__ico_author {
+  }
+  
+  .description-item__ico_author {
     background-image: url("../images/author.svg");
-}
-
-.description-item__ico_post {
+  }
+  
+  .description-item__ico_post {
     background-image: url("../images/post.svg");
-}
-
-.btn {
+  }
+  
+  .btn {
     width: 150px;
     height: 40px;
     color: #000;
@@ -99,9 +91,9 @@ body {
     border-radius: 0;
     text-transform: uppercase;
     font-family: Iceland;
-}
-
-.btn:hover {
+  }
+  
+  .btn:hover {
     cursor: pointer;
     background-color: #eee;
-}
+  }
