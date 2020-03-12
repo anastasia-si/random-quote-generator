@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Text: {{ quote.text }}</h1>
+
+  <p><strong>Author:</strong> {{ quote.author }}  </p> <!-- author detail link not yet defined -->
+  <p><strong>Date:</strong> {{ quote.created_date }}</p>
+  <p><strong>User:</strong> {{ quote.user }}</p> 
+   
+  <p><strong>Quote Type:</strong> {{ quote.quotetype.all|join:", " }}</p>  
+
+  <p class="{% if quote.quotetype == 'fun' %}text-success{% elif quote.quotetype == 'ins' %}text-danger{% else %}text-warning{% endif %}">
+          {{ quote.quotetype }}
+        </p>
+{% endblock %}

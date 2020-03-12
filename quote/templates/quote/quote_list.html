@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Quote List</h1>
+  {% if quote_list %}
+  <ul>
+    {% for quote in quote_list %}
+      <li>
+
+        <a href="{{ quote.get_absolute_url }}">{{ quote.text }}</a> ({{quote.author}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no quotes in the library.</p>
+  {% endif %}       
+{% endblock content %}

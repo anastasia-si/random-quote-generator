@@ -1,0 +1,107 @@
+p, h1, h2, h3 {
+    margin-block-start:0; 
+    margin-block-end:0; 
+    margin-inline-start:0; 
+    margin-inline-end:0;
+	padding-block-start:0; 
+	padding-block-end:0; 
+	padding-inline-start:0; 
+	padding-inline-end:0;
+}
+
+@font-face {
+    font-family: Iceland;
+    src: url("../fonts/Iceland-Regular.ttf");
+    
+  }
+  
+  h1 {
+    font-family: Iceland;
+    font-size: 16vw;
+    font-weight: normal;
+    
+    padding: 0 0.2em;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+body {
+	background-color: #000;
+	margin: 0;
+    padding: 0;
+
+    color: #606c76;
+    font-family: Iceland, Monospace, sans-serif;
+    font-size: 1.6em;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.page-header {
+    text-align: center;
+    color: #aaaaaa;
+}
+
+.panel {
+    padding: 20px;
+}
+.quote__text {
+    color: #fff;
+    margin: 0 auto;
+    padding: 10px 15px 25px 15px;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 1;  
+}
+
+.quote__text strong {
+    font-weight: bold;
+    color: #d09f9f;
+}
+
+.quote__description {
+	margin: 0;
+    font-size: 0.7em;
+    text-align: left;
+    color: #ccc;
+
+}
+
+.description-item__ico {
+    display: inline-block;  
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: text-top;
+}
+
+.description-item__ico_tag {
+    background-image: url("../images/tag.svg");
+}
+
+.description-item__ico_author {
+    background-image: url("../images/author.svg");
+}
+
+.description-item__ico_post {
+    background-image: url("../images/post.svg");
+}
+
+.btn {
+    width: 150px;
+    height: 40px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid grey;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: Iceland;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #eee;
+}
