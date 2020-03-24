@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+  <a class="add_sign" href="{% url 'add' %}"></a>
   <section class="panel panel_quote quote">
     <blockquote class="quote__text"> {{ text | safe }} </blockquote>
     <footer class="quote__description">
@@ -26,6 +26,6 @@
   <div class="panel panel_actions">
     <button class="btn" onClick="window.location.reload();">Show more!</button>
   </div>  
-
-
+  
+ 
 {% endblock %}

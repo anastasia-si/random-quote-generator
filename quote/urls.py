@@ -7,3 +7,7 @@ urlpatterns = [
     #path('quote/<int:pk>', views.QuoteDetailView.as_view(), name='quote-detail'),
 
 ]
+
+urlpatterns += [   
+    path('add/', views.add_quote, name='add'),
+]

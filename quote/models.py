@@ -18,9 +18,8 @@ class QuoteType(models.Model):
 
 	name = models.CharField(max_length=3, choices=QUOTE_TYPES, help_text='Quote category')
 
-	def __str__(self):
-
-		return self.name
+	def __str__(self):        
+		return dict(self.QUOTE_TYPES)[self.name]
 
 
 class Author(models.Model):
@@ -50,7 +49,7 @@ class Quote(models.Model):
 	text = models.TextField(max_length=500)
 	author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True, blank=True)
 	user = models.CharField(max_length=100, null=True)
-	quotetype = models.ManyToManyField(QuoteType, help_text='Please select a quote type:')
+	quotetype = models.ManyToManyField(QuoteType) #, help_text='Please select a quote type:'
 	created_date = models.DateField(null=False, auto_now=True)
 
 	def __str__(self):

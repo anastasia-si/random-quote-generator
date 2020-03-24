@@ -1,6 +1,12 @@
-from django.shortcuts import render
+import datetime
+
+from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from quote.models import Author, Quote, QuoteType
+from quote.forms import AddQuoteForm
+
 from .lib import utils as utils
 from .lib import quotation as q
 from .lib import quote_formatter as qf
@@ -22,7 +28,7 @@ def home(request):
 
     tag_list = [quote_type.get_name_display() for quote_type in random_quote.quotetype.all()]
     tags = ', '.join(tag_list)
-
+    
     context = {
         'text': formatted_txt,
         'author': author,
@@ -32,3 +38,24 @@ def home(request):
     }
 
     return render(request, 'home.html', context=context)
+
+
+def add_quote(request):
+    
+    if request.method == 'POST':
+
+        # Create a form instance and populate it with data from the request (binding):
+        form = AddQuoteForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('home')) # redirect back to the home page
+
+    else:
+        form = AddQuoteForm()
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'quote/add_quote.html', context)

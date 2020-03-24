@@ -26,3 +26,4 @@ urlpatterns = [
     path('quote/', include('quote.urls')),
 	path('', RedirectView.as_view(url='quote/', permanent=True)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

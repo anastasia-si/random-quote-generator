@@ -42,7 +42,12 @@ p, h1, h2, h3 {
     color: #fff;
     margin: 0 auto;
     padding: 10px 15px 25px 15px;
+  }
 
+  @media (min-width: 768px) {
+    .quote__text { 
+      min-height: 200px;
+    }
   }
   
   .quote__text strong {
@@ -90,10 +95,94 @@ p, h1, h2, h3 {
     border: 1px solid grey;
     border-radius: 0;
     text-transform: uppercase;
+    text-decoration: none;
     font-family: Iceland;
+
   }
   
   .btn:hover {
     cursor: pointer;
     background-color: #eee;
+  }
+
+  .add_sign {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    background-image: url("../images/plus_sign.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .add_sign:hover {
+    cursor: pointer;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    width: 10%;
+  }
+
+  th, td {
+    padding: 15px 10px 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  label {
+    color: #ffffff;
+  }
+
+  textarea {
+    width: 80%;
+    font-size: inherit;
+  }
+
+  select, 
+  input {
+    width: 270px;
+    height: 50px;
+    padding: 0 5px;
+    border: 0;
+  }
+
+  .select2-selection, 
+  .select2-selection__rendered, 
+  .select2-selection__arrow,
+  .select2-search__field {
+    height: 50px !important;  
+    line-height: 40px !important;
+    font-family: inherit;
+    font-size: inherit !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+}
+
+  .select2-selection {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  .select2-selection__choice {
+    height: 35px;
+  }
+
+  .select2-selection__placeholder {
+    color: #777 !important;
+  }
+
+ .select2-selection--single, 
+ .select2-selection--multiple {
+    border-radius: 0 !important;
+  }
+
+  .select2-container {
+    min-width: 270px;
+    width: auto !important;
   }

@@ -15,3 +15,10 @@ function getRandomDarkColor() {
 }
 
 document.body.style.backgroundColor = getRandomDarkColor();
+
+$(document).ready(function() {
+    $('select').select2({
+        placeholder: 'Select an option'
+    });
+    
+});
